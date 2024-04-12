@@ -1,5 +1,5 @@
 import { ResponsiveChoropleth } from "@nivo/geo";
-import { geoFeatures } from "../../constants/mockGeoFeatures.js";
+import { geoFeatures } from "../../constants/mockGeoFeatures";
 import { mockGeographyData } from "../../constants/countries";
 
 const Map = () => (

@@ -1,4 +1,3 @@
-import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { createBond } from "../../services/bondService";
@@ -22,7 +21,10 @@ const initialValues = {
 };
 
 const BondForm = () => {
-    const handleSubmit = (values, { resetForm }) => {
+    const handleSubmit = (
+        values: any,
+        { resetForm }: { resetForm: () => void }
+    ) => {
         // Handle form submission here
         console.log(values);
         createBond(values);
@@ -48,7 +50,7 @@ const BondForm = () => {
                         onSubmit={handleSubmit}
                         className="w-full"
                     >
-                        {({ errors, touched }) => (
+                        {() => (
                             <Form>
                                 <div className="mb-4">
                                     <label

@@ -1,7 +1,5 @@
-import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import TextInputField from "../components/TextInputField";
 import Issuer from "../../types/issuer";
 import { createIssuer } from "../../services/issuerService";
 
@@ -29,10 +27,12 @@ const industries = [
     "Manufacturing",
     "Retail",
 ];
-const creditRatings = ["AAA", "AA", "A", "BBB", "BB", "B", "CCC"];
 
 const IssuerForm = () => {
-    const handleSubmit = (values, { resetForm }) => {
+    const handleSubmit = (
+        values: any,
+        { resetForm }: { resetForm: () => void }
+    ) => {
         // Handle form submission here
         console.log(values);
         createIssuers(values);
@@ -68,7 +68,7 @@ const IssuerForm = () => {
                         onSubmit={handleSubmit}
                         className="w-full"
                     >
-                        {({ errors, touched }) => (
+                        {() => (
                             <Form>
                                 <div className="mb-4">
                                     <label

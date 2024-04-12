@@ -11,11 +11,7 @@ const columns = [
 ];
 
 export default function DataTable() {
-    const {
-        data: issuers,
-        error: issuersError,
-        isLoading: issuersLoading,
-    } = useIssuers();
+    const { data: issuers } = useIssuers();
 
     return (
         <div className="text-white h-full">

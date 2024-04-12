@@ -1,6 +1,4 @@
-import React from "react";
 import DataTable from "../datatable";
-import IssuerForm from "./IssuerForm";
 
 const Issuers = () => {
     return (

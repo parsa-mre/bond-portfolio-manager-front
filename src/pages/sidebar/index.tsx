@@ -1,6 +1,5 @@
-import { red } from "@mui/material/colors";
 import { useState } from "react";
-import { FiUser, FiFileText, FiPieChart, FiBarChart2 } from "react-icons/fi"; // Importing icons from react-icons
+import { FiFileText, FiPieChart, FiBarChart2 } from "react-icons/fi"; // Importing icons from react-icons
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -8,7 +7,6 @@ const Sidebar = () => {
 
     const handleNavigate = (path: string) => {
         setSelectedItem(path);
-        redirect(path);
     };
 
     return (
