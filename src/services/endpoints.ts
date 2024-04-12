@@ -7,11 +7,12 @@ const BOND_ENDPOINTS = {
 };
 
 const ISSUER_ENDPOINTS = {
-    createIssuer: () => "/issuers",
-    getIssuers: () => "/issuers",
-    getIssuer: (id: string) => `/issuers/${id}`,
-    updateIssuer: (id: string) => `/issuers/${id}`,
-    deleteIssuer: (id: string) => `/issuers/${id}`,
+    createIssuer: () => "issuers",
+    getIssuers: (page: number, page_size: number) =>
+        `issuers?page=${page}&page_size=${page_size}`,
+    getIssuer: (id: string) => `issuers/${id}`,
+    updateIssuer: (id: string) => `issuers/${id}`,
+    deleteIssuer: (id: string) => `issuers/${id}`,
 };
 
 export { BOND_ENDPOINTS, ISSUER_ENDPOINTS };
