@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:4477";
+const BASE_URL = import.meta.env.BASE_URL || "http://localhost:4477";
 
 const Api = axios.create({
     baseURL: BASE_URL,
